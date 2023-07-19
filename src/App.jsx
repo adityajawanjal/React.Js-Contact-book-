@@ -1,17 +1,17 @@
-import React from 'react';
-import { Routes , Route, BrowserRouter} from "react-router-dom";
-import Join from './pages/Join';
-import Chat from './pages/Chat';
+import React from "react";
+import List from "./components/List";
+import Add from "./components/Add";
 
 const App = () => {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route exact path='/' element={<Join/>} />
-      <Route path='/chat' element={<Chat/>} />
-    </Routes>
-    </BrowserRouter>
-  )
-}
+    <>
+      <h1 className=" my-10 text-5xl text-orange-600 text-center">
+        Contact List of Users{" "}
+      </h1>
+      <Add />
+      <List />
+    </>
+  );
+};
 
 export default App;
